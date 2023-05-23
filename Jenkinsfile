@@ -12,16 +12,8 @@ pipeline {
         stage('Test') {
             steps {
                 // Run unit tests
-                sh 'python3 manage.py test jenkinsapp.tests.StudentRegistrationTestCase'
+                sh 'python manage.py test jenkinsapp.tests.StudentRegistrationTestCase'
             }
         }
-
-        stage('Deploy') {
-            steps {
-                // deploy
-                echo 'Deploying............'
-            }
-        }
-
     }
 }
