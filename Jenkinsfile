@@ -15,5 +15,13 @@ pipeline {
                 sh 'python3 manage.py test jenkinsapp.tests.StudentRegistrationTestCase'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                // deploy
+                echo 'Deploying................................'
+            }
+        }
+
     }
 }
